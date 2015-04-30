@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+	<script src="http://maps.google.com/maps/api/js?sensor=true|false"
+		type="text/javascript"></script>
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="/template/simpleStyleTemplate.xhtml">
+		<ui:define name="title">
+			trystuff
+		</ui:define>
+		<ui:define name="message">
+
+
+
+			<p:menu>
+				<p:menuitem value="Gmail" url="http://www.google.com" />
+				<p:menuitem value="Hotmail" url="http://www.hotmail.com" />
+				<p:menuitem value="Yahoo Mail" url="http://mail.yahoo.com" />
+				<p:menuitem value="Youtube" url="http://www.youtube.com" />
+				<p:menuitem value="Break" url="http://www.break.com" />
+				<p:menuitem value="Metacafe" url="http://www.metacafe.com" />
+				<p:menuitem value="Facebook" url="http://www.facebook.com" />
+				<p:menuitem value="MySpace" url="http://www.myspace.com" />
+			</p:menu>
+
+
+
+			<p:fieldset legend="Simple Fieldset">
+				<h:panelGrid column="2">
+					<p:graphicImage value="/images/godfather/1.jpg" />
+					<h:outputText value="The story begins as Don Vito Corleone ..." />
+				</h:panelGrid>
+			</p:fieldset>
+
+
+			<p:gmap center="41.381542, 2.122893" zoom="15" type="hybrid"
+				style="width:600px;height:400px" />
+
+			<p:chart type="pie" model="#{bean.model}" />
+
+			<p:accordionPanel>
+				<p:tab title="First Tab Title">
+					<h:outputText value="Lorem" />
+...More content for first tab
+</p:tab>
+				<p:tab title="Second Tab Title">
+					<h:outputText value="Ipsum" />
+				</p:tab>
+//any number of tabs
+</p:accordionPanel>
+
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
